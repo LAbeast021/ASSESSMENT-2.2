@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/"> HOME </a>
+   <h1> HOBBIES DETAIL </h1>
+
+   <h3><%= hobbie.name%></h3>
+   <h3><%= hobbie.caption%></h3>
+
+
+   <h1>EDIT THE HOBBIE </h1>
+   <form action="/<%= hobbie._id %>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%= hobbie.name%>">
+    <input type="text" name="caption" value="<%= hobbie.caption%>">
+    <input value="edit hobbie" type="submit">
+    </form>
+
+
+    <form action="/<%= hobbie._id %>?_method=DELETE" method="POST">
+        <input style="color: red; width: 30px;" type="submit" value="X">
+        </form>
+    
+</body>
+</html>
